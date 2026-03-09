@@ -73,7 +73,7 @@ export default function Home() {
   const sendOpponentCard = (index) => {
     const card = opponentCardQueue[index];
     console.log("Sending opponent card to Unity:", card);
-    sendMessage("GameManager", "UseCardFromBrowser", JSON.stringify(card));
+    sendMessage("Managers", "UseCardFromBrowser", JSON.stringify(card));
     setOpponentCardQueue((prev) => prev.filter((_, i) => i !== index));
   };
 
