@@ -66,7 +66,7 @@ export default function Home() {
   const sendPlayerCardBack = (index) => {
     const card = playerCardQueue[index];
     console.log("Sending player card back to Unity:", card);
-    sendMessage("GameManager", "UseCardFromBrowser", JSON.stringify(card));
+    sendMessage("Managers", "UseCardFromBrowser", JSON.stringify(card));
     setPlayerCardQueue((prev) => prev.filter((_, i) => i !== index));
   };
 
